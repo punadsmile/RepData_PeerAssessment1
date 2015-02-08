@@ -7,8 +7,6 @@ output:
     keep_md: true
 ---
 
-# Reproducible Research: Peer Assessment 1
-
 ## Loading and preprocessing the data
 
 ```{r, echo=TRUE}
@@ -42,7 +40,7 @@ colnames(average_date)[2] <- "intervalAvg"
 ```
 
 ## Imputing missing values
-```{r}
+```{r, echo=TRUE}
 # Total number of missing values
 sum(is.na(data$steps))
 # Imputing NA's with average on 5-min interval
@@ -68,7 +66,7 @@ The histograms seemed to be alike, the frequency incresed.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-```{r}
+```{r, echo=TRUE}
 library(lattice)
 weekdays <- weekdays(as.Date(merged$date))
 data_weekdays <- transform(merged, day=weekdays)

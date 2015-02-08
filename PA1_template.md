@@ -2,8 +2,6 @@
 PuNa  
 Sunday, Feburary 8, 2015  
 
-# Reproducible Research: Peer Assessment 1
-
 ## Loading and preprocessing the data
 
 
@@ -22,7 +20,7 @@ daily_steps <- ddply(data2, .(date), summarise, steps=sum(steps))
 hist(daily_steps$steps, xlab="Steps per Day", ylab="Frequency", main="Daily Steps")
 ```
 
-![](./PA1_files/figure-html/unnamed-chunk-2-1.png) 
+![](./PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
 
 ```r
 # Mean and median total number of steps taken per day
@@ -50,7 +48,7 @@ plot(average_date$interval, average_date$steps, type="l", xlab="5-minute Interva
 ylab="Average Steps", main="Average Daily Activity")
 ```
 
-![](./PA1_files/figure-html/unnamed-chunk-3-1.png) 
+![](./PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
 
 ```r
 # Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
@@ -95,7 +93,7 @@ hist(new_daily_steps$steps, main="Number of Steps",
      xlab="steps taken each day", ylab="Frequency")
 ```
 
-![](./PA1_files/figure-html/unnamed-chunk-4-1.png) 
+![](./PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
 
 ```r
 # mean and median total number of steps taken per day don't change significantly
@@ -138,4 +136,4 @@ average_week <- ddply(data_weekdays, .(interval, wk), summarise, steps=mean(step
 xyplot(steps ~ interval | wk, data = average_week, layout = c(1, 2), type="l")
 ```
 
-![](./PA1_files/figure-html/unnamed-chunk-5-1.png) 
+![](./PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
