@@ -1,6 +1,12 @@
 ---
-output: word_document
+title: "RepData_PeerAssessment1"
+author: "PuNa"
+date: "Sunday, Feburary 8, 2015"
+output: 
+  html_document:
+    keep_md: true
 ---
+
 # Reproducible Research: Peer Assessment 1
 
 ## Loading and preprocessing the data
